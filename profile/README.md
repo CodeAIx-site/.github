@@ -6,7 +6,7 @@
 
 ## Overview
 
-The CodeAIx platform is a solution designed to cater to the modern developer's needs. It is divided into two distinct models: CodeAIx and CodeAIx+. Each model has been meticulously crafted to serve different aspects of the software development lifecycle. While CodeAIx is primarily focused on fast and efficient code execution, CodeAIx+ takes a deeper dive into code analysis, quality assessment, and debugging.
+The CodeAIx platform is a solution designed to cater to the modern developer's needs. It is divided into two distinct models: CodeAIx and CodeAIx+. Each model has been crafted to serve different aspects of the software development lifecycle. While CodeAIx is primarily focused on fast and efficient code execution, CodeAIx+ takes a deeper dive into code analysis, quality assessment, and debugging.
 
 ## Architecture
 ```mermaid
@@ -151,7 +151,7 @@ Both CodeAIx and CodeAIx+ are built with a robust infrastructure that supports:
 
 ### Community Collaboration
 
-- **Smart Chatbot & Forum**: Immediate troubleshooting via a smart chatbot and a community forum for shared problem-solving and collaborative support.
+- **CodeMitra & Forum**: Immediate troubleshooting via a CodeMitra and a community discussion forum for shared problem-solving and collaborative support.
 
 ## CodeAIx Model: Streamlined Code Execution
 
@@ -242,4 +242,4 @@ The CodeAIx platform represents a holistic approach to modern software developme
 - **CodeAIx** is dedicated to efficient code execution, real-time feedback, and robust error monitoring in a highly responsive and modern interface. It is ideal for developers who need to quickly test, run, and debug their code.
 - **CodeAIx+** elevates this experience with advanced tools for code analysis, debugging, and quality assessment. With features like automatic language recognition and in-depth performance metrics powered by Google Gemini, it provides developers with the insights needed to optimize and secure their code at a granular level.
 
-Together, these models form a versatile, secure, and collaborative platform that addresses the full spectrum of development needs, from rapid code execution to detailed code analysis and debugging, ensuring that developers have the right tools at every stage of the software development lifecycle.
+Together, these models form a versatile, secure, and collaborative platform that addresses the full spectrum of basic development needs, from rapid code execution to detailed code analysis and debugging, ensuring that developers have the right tools at every stage of the software development lifecycle.
