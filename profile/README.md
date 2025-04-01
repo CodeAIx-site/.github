@@ -11,120 +11,94 @@ The CodeAIx platform is a solution designed to cater to the modern developer's n
 ## Architecture
 ```mermaid
 %%{init: {
-    'theme': 'neutral', 
-    'themeVariables': {
-        'primaryColor': '#F0F4F8', 
-        'primaryTextColor': '#1A365D', 
-        'secondaryColor': '#E2E8F0',
-        'tertiaryColor': '#4A5568',
-        'lineColor': '#2D3748',
-        'fontFamily': 'Inter, Arial, sans-serif',
-        'fontSize': '16px'
-    }
+  'theme': 'default', 
+  'themeVariables': {
+    'primaryColor': '#4285F4', 
+    'primaryTextColor': '#FFFFFF', 
+    'secondaryColor': '#34A853',
+    'tertiaryColor': '#FBBC05',
+    'lineColor': '#333333',
+    'fontFamily': 'Inter, Arial, sans-serif',
+    'fontSize': '16px'
+  }
 }}%%
 flowchart TD
-        %% ================================
-        %% Main System Container
-        %% ================================
-        A([CodeAIx Platform])
-        A --- B{Core Architecture}
-        
-        %% ================================
-        %% Security & Authentication Subsystem
-        %% ================================
-        subgraph "Security & Authentication"
-                direction TB
-                SEC([Security Layer])
-                VERIFY[User Verification]
-                AUTH[Google Authentication]
-                DB1[(User Database)]
-                DB2[(Code Repository)]
-                
-                SEC --> VERIFY
-                VERIFY --> AUTH
-                AUTH <--> DB1
-                AUTH <--> DB2
-        end
-
-        %% ================================
-        %% Core Models
-        %% ================================
-        B --> |Execution Model| C[CodeAIx: Streamlined Execution]
-        B --> |Analysis Model| D[CodeAIx+: Advanced Analysis]
-        
-        %% ================================
-        %% CodeAIx Core Features
-        %% ================================
-        subgraph "CodeAIx Core Features"
-                direction TB
-                API1[Rapid API Integration]
-                EXEC[Real-Time Execution]
-                PERF1[Performance Monitoring]
-                UI1[Responsive Interface]
-                LANG[Multi-Language Support]
-        end
-        
-        %% ================================
-        %% CodeAIx+ Advanced Capabilities
-        %% ================================
-        subgraph "CodeAIx+ Advanced Capabilities"
-                direction TB
-                GEMINI[AI-Powered Analysis]
-                DEBUG[Advanced Debugging]
-                OPT[Code Optimization]
-                METRICS[Performance Metrics]
-                CONVERT[Language Conversion]
-        end
-        
-        %% ================================
-        %% Integration Ecosystem
-        %% ================================
-        subgraph "Integration Ecosystem"
-                direction TB
-                GITHUB[GitHub Access]
-                SOCIAL[Social Sharing]
-                DEVICE[Device Integration]
-        end
-        
-        %% ================================
-        %% Developer Support
-        %% ================================
-        subgraph "Developer Support"
-                direction TB
-                CHAT[Intelligent Chatbot]
-                FORUM[Community Forum]
-        end
-
-        %% ================================
-        %% Establishing Connections
-        %% ================================
-        %% Core system connects to the security layer.
-        A --> SEC
-
-        %% Execution and Analysis models incorporate core features.
-        C --> API1 & EXEC & PERF1 & UI1 & LANG
-        D --> GEMINI & DEBUG & OPT & METRICS & CONVERT
-
-        %% Integration ecosystem and support services are accessible via both models.
-        C & D --> GITHUB
-        C & D --> SOCIAL
-        C & D --> DEVICE
-        C & D --> CHAT
-        C & D --> FORUM
-
-        %% ================================
-        %% Styling Definitions
-        %% ================================
-        classDef mainNode fill:#E6F2FF, stroke:#2C5282, stroke-width:3px, color:#1A365D, font-weight:bold;
-        classDef modelNode fill:#EBF8FF, stroke:#3182CE, stroke-width:2px, color:#2C5282, font-weight:600;
-        classDef featureNode fill:#F0FFF4, stroke:#48BB78, stroke-width:1.5px, color:#276749;
-        classDef infrastructureNode fill:#F7FAFC, stroke:#4A5568, stroke-width:1.5px, color:#2D3748;
-
-        class A mainNode;
-        class B modelNode;
-        class C,D modelNode;
-        class API1,EXEC,PERF1,UI1,LANG,GEMINI,DEBUG,OPT,METRICS,CONVERT featureNode;
-        class SEC,VERIFY,AUTH,DB1,DB2,GITHUB,SOCIAL,DEVICE,CHAT,FORUM infrastructureNode;
+    %% Main Platform Node at top
+    A["CodeAIx Platform"] --> B["Core Architecture"]
+    
+    %% Core Models in column
+    B --> C["CodeAIx: Streamlined Execution"]
+    B --> D["CodeAIx+ : Advanced Analysis"]
+    
+    %% Authentication with full name
+    A --> AUTHENTICATION
+    
+    subgraph AUTHENTICATION ["Authentication"]
+        direction TB
+        SEC1["Security Layer"] --> VERIFY["User Verification"]
+        VERIFY --> AUTH["Google Authentication"]
+        AUTH --> DB1[(User Database)]
+        AUTH --> DB2[(Code Repository)]
+    end
+    
+    %% Core Features in column
+    C --> CORE
+    
+    subgraph CORE ["CodeAIx Core Features"]
+        direction TB
+        API1["Rapid API Integration"]
+        API1 --> EXEC["Real-Time Execution"]
+        EXEC --> PERF1["Performance Monitoring"]
+        PERF1 --> UI1["Responsive Interface"]
+        UI1 --> LANG["Multi-Language Support"]
+    end
+    
+    %% Advanced Features with full name
+    D --> CODEAIXPLUS
+    
+    subgraph CODEAIXPLUS ["CodeAIx+ Capabilities"]
+        direction TB
+        GEMINI["AI-Powered Analysis"]
+        GEMINI --> DEBUG["Advanced Debugging"]
+        DEBUG --> OPT["Code Optimization"]
+        OPT --> METRICS["Performance Metrics"]
+        METRICS --> CONVERT["Language Conversion"]
+    end
+    
+    %% Integration with full name
+    C & D --> INTEGRATION
+    
+    subgraph INTEGRATION ["Integration Ecosystem"]
+        direction TB
+        GITHUB["GitHub Access"]
+        GITHUB --> SOCIAL["Social Sharing"]
+        SOCIAL --> DEVICE["Device Integration"]
+    end
+    
+    %% Support with full name
+    C & D --> SUPPORT
+    
+    subgraph SUPPORT ["Developer Support"]
+        direction TB
+        CHAT["Intelligent Chatbot"]
+        CHAT --> FORUM["Community Forum"]
+    end
+    
+    %% Enhanced styling with more rounded corners and gradients
+    classDef mainNode fill:#4285F4, stroke:#1967D2, stroke-width:3px, color:#FFFFFF, font-weight:bold, rounded:true, border-radius:15px;
+    classDef modelNode fill:#34A853, stroke:#0F9D58, stroke-width:2px, color:#FFFFFF, font-weight:600, rounded:true, border-radius:12px;
+    classDef featureNode fill:#FBBC05, stroke:#F9AB00, stroke-width:1.5px, color:#202124, rounded:true, border-radius:10px;
+    classDef infrastructureNode fill:#EA4335, stroke:#C5221F, stroke-width:1.5px, color:#FFFFFF, rounded:true, border-radius:10px;
+    classDef subgraphStyle fill:#F8F9FA, stroke:#DADCE0, stroke-width:2px, color:#202124, rounded:true, border-radius:15px;
+    
+    class A,B mainNode;
+    class C,D modelNode;
+    class API1,EXEC,PERF1,UI1,LANG,GEMINI,DEBUG,OPT,METRICS,CONVERT featureNode;
+    class SEC1,VERIFY,AUTH,DB1,DB2,GITHUB,SOCIAL,DEVICE,CHAT,FORUM infrastructureNode;
+    class AUTHENTICATION,CORE,CODEAIXPLUS,INTEGRATION,SUPPORT subgraphStyle;
+    
+    %% Adjust edge styles
+    linkStyle default stroke:#666666,stroke-width:2px;
 ```
 
 ## Common Features
