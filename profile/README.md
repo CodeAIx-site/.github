@@ -194,20 +194,30 @@ The CodeAIx+ model is tailored for developers who require sophisticated tools fo
 - **Unified Repository and Sharing Functions**: All integrations available in CodeAIx are also fully supported in CodeAIx+, including GitHub access, social media sharing, and native device sharing. This ensures that developers have a consistent experience across both models, with additional analytical power at their disposal.
 - **Security and User Management**: Both models maintain the highest standards of security. CodeAIx+ uses Google Authentication and MongoDB Atlas for secure data management, along with email verification and password recovery, ensuring that user data and code integrity are never compromised.
 
-## Future Enhancement Project Scope
+## ~~Future Enhancement Project Scope~~
 
-Our future target is to minimize plagiarism and cheating in exams and interviews by creating a comprehensive monitoring and control system within the CodeAIx ecosystem.
+~~Our future target is to minimize plagiarism and cheating in exams and interviews by creating a comprehensive monitoring and control system within the CodeAIx ecosystem.~~
 
-#### Secure Interview Environment
+### ~~Secure Interview Environment~~
 
--   **Complete Interviewer Control**: We want to develop a mechanism where all technical interviews must be conducted on the CodeAIx platform, giving interviewers complete control over the interviewee's system during coding assessments.
--   **Background Process Monitoring**: Interviewers will have access to monitor any third-party applications running on the candidate's system, even those not visible during standard screen sharing.
+- ~~**Complete Interviewer Control**: We want to develop a mechanism where all technical interviews must be conducted on the CodeAIx platform, giving interviewers complete control over the interviewee's system during coding assessments.~~
+- ~~**Background Process Monitoring**: Interviewers will have access to monitor any third-party applications running on the candidate's system, even those not visible during standard screen sharing.~~
 
-#### Anti-Plagiarism Tools
+### ~~Anti-Plagiarism Tools~~
 
--   **Keystroke Pattern Analysis**: The platform will monitor typing patterns to ensure the code is being written by the candidate in real-time rather than pasted from prepared sources.
+- ~~**Keystroke Pattern Analysis**: The platform will monitor typing patterns to ensure the code is being written by the candidate in real-time rather than pasted from prepared sources.~~
 
-This enhancement aligns with our mission to provide comprehensive tools for the entire software development lifecycle, now extending to the recruitment and assessment processes with a focus on maintaining the highest standards of integrity.
+---
+
+## Why the above Enhancements are not Feasible
+
+**Technical and Legal Restrictions:**
+
+- **Browser Security:** Modern browsers strictly sandbox webpages, preventing any access to system-level information, background processes, or running applications. There are no browser APIs that allow for remote control or process monitoring on a user's device.
+- **Keystroke Logging:** While you can capture keystrokes within a webpage, you cannot do so outside the browser tab, and storing raw keystrokes raises significant privacy and legal concerns.
+- **Legal Compliance:** Monitoring user keystrokes or background applications without explicit, informed consent is illegal in many jurisdictions (GDPR, CCPA, etc.) and can severely damage user trust and your platform's reputation.
+
+---
 
 ## Conclusion
 
